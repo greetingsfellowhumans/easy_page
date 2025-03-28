@@ -1,0 +1,9 @@
+.tabber_menu__outer {
+  display: flex;
+  justify-content: space-around;
+}
+.tabber_menu__button {
+  padding: 0.5rem;
+  border-style: solid;
+  cursor: pointer;
+}

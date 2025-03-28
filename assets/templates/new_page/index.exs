@@ -9,6 +9,7 @@ defmodule DemoWeb.Pages.Index do
   def render(assigns) do
     ~H"""
     <h1>Loading index page</h1>
+    <Tabber.Style.style />
     <Tabber.Menu.menu tabber={@tabber} />
     <Tabber.Body.body tabber={@tabber}>
       <:tab title="Tab A">
