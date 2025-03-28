@@ -33,7 +33,6 @@ defmodule EasyPage.Components.Tabber.Body do
   end
   ```
   """
-  alias DialyxirVendored.Warning
   use Phoenix.Component
 
   attr(:tabber, :map, required: true)
