@@ -15,6 +15,7 @@ def deps do
     {:easy_page, "~> 0.1.0"}
   ]
 end
+```
 
 If you are only using the scaffolding features (probably recommended), then change it to:
 ```elixir
