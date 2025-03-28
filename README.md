@@ -3,6 +3,8 @@
 This is a bundle of Phoenix components and scaffolding tools I use all the time. YMMV.
 One major motivation is that I do not like to have my entire liveview in one file, but rather split it into many small ones, which can involve tedious amounts of typing and boilerplate.
 
+![pic](https://github.com/user-attachments/assets/f52361a3-1fac-46cb-ad2c-5f184028da72)
+
 ## Installation
 
 EasyPage can be installed by adding `easy_page` to your list of dependencies in `mix.exs`:
