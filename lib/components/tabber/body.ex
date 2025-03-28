@@ -5,6 +5,11 @@ defmodule EasyPage.Components.Tabber.Body do
 
   Titles must be unique.
 
+  > #### Warning {: .warning}
+  > 
+  > Most of Tabber's magic is in the backend, not the components.
+  > You are probably better off copying the source code so you can customize it for your app.
+
   ```elixir
   def render(assigns) do
     ~H\"\"\"
@@ -28,6 +33,7 @@ defmodule EasyPage.Components.Tabber.Body do
   end
   ```
   """
+  alias DialyxirVendored.Warning
   use Phoenix.Component
 
   attr(:tabber, :map, required: true)
@@ -39,10 +45,12 @@ defmodule EasyPage.Components.Tabber.Body do
   def body(assigns) do
     ~H"""
     <%= if !!@tabber.ctl.current_tab do %>
-      <div class="tabber_body__outer" :for={%{title: title} = tab <- @tab}>
-        <div class="tabber_body__inner" :if={title == @tabber.ctl.current_tab.title}>
-          {render_slot(tab)}
-        </div>
+      <div class="tabber_body__outer">
+        <%= for %{title: title} = tab <- @tab do %>
+          <div class="tabber_body__inner" :if={title == @tabber.ctl.current_tab.title}>
+            {render_slot(tab)}
+          </div>
+        <% end %>
       </div>
     <% end %>
     """

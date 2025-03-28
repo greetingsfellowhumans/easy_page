@@ -48,6 +48,7 @@ defmodule EasyPage.Tabber do
 
     def render(assigns) do
       ~H\"\"\"
+      <Tabber.Style.style />
       <Tabber.Menu.menu tabber={@tabber} />
 
       <Tabber.Body.body tabber={@tabber}>
